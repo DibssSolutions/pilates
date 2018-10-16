@@ -1,0 +1,26 @@
+<div class="what-learn js-navigation-section" id="what-learn">
+	<div class="what-learn__inner inner">
+		<h2 class="what-learn__title title">Чему вы научитесь на курсе?</h2>
+		<div class="row what-learn__list">
+			{% for item in [
+				"Общим и основным правилам 
+				проведения занятий.",
+				"Основным принципам внутреннего контроля во время занятий.",
+				"Правильному выполнению 15 базовых упражнений пилатес. ",
+				"Разбираться в анатомическом строении тела человека.",
+				"Эффективным методам по улучшению осанки.",
+				"Как максимально комфортно и 
+				безопасно сбросить лишний вес."
+			] %}
+				<div class="col col-50 col-sm-100">
+					<div class="what-learn__item">
+						{{ item }}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+		<div class="what-learn__btn">
+			<a href="#" class="btn btn_dark btn_big">записаться на курс</a>
+		</div>
+	</div>
+</div>

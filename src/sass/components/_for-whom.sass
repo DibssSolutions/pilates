@@ -1,0 +1,35 @@
+.for-whom
+	position: relative
+	padding: 95px 0
+	+clr
+	&__list
+		margin-top: 65px
+	&__item
+		font-size: 20px
+		font-weight: 700
+		padding-left: 70px
+		position: relative
+		&:not(:first-child)
+			margin-top: 25px
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			background-color: $orange
+			+circle(40)
+	&__img
+		position: absolute
+		right: 0
+		bottom: 40px
+		z-index: -1
+		+md
+			position: static
+			margin-top: 20px
+			+clr
+		img
+			display: block
+			max-width: 100%
+			+md
+				float: right

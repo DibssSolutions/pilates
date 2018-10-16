@@ -1,0 +1,137 @@
+.main
+	position: relative
+	height: 100vh
+	min-height: 630px
+	background-color: rgba($color: #2b2e26, $alpha: 0.5)
+	+sm
+		height: auto
+	.error
+		color: #fff
+	&__video
+		position: relative
+		height: 100%
+		width: 100%
+		+sm
+			position: absolute
+			top: 0
+			left: 0
+		&:before
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			content: ""
+			z-index: 1
+			background-color: rgba(#142338, 0.45) 
+	&__container
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: 4
+		color: #fff
+		padding: 100px 0 85px
+		+vertical
+		+sm
+			padding-bottom: 0
+			position: relative
+		&:before
+			+sm
+				display: none
+	&__content
+		display: inline-block
+		vertical-align: middle
+		// padding: 150px 15px
+		// max-width: 1105px
+		width: 100%
+		+sm
+			display: block
+			padding-top: 30px
+	&__footer
+		position: absolute
+		font-size: 14px
+		width: 100%
+		bottom: 0
+		margin-bottom: 46px
+		+sm
+			position: relative
+			margin: 20px 0
+			
+	&__footer-wrap
+		display: flex
+		justify-content: space-between
+		+sm
+			flex-wrap: wrap
+			justify-content: center
+	&__title
+		font-weight: 900
+		font-size: 39px
+		text-transform: uppercase
+		margin-top: 10px
+		+md
+			font-size: 32px
+		+sm
+			font-size: 24px
+	&__subtitle
+		display: inline-block
+		font-size: 28px
+		font-weight: 900
+		// max-width: 820px
+		margin-top: 30px
+		text-transform: uppercase
+		+sm
+			font-size: 20px
+	&__descr
+		font-size: 13px
+		font-weight: 500
+	&__date
+		font-weight: 900
+		font-size: 40px
+		text-transform: uppercase
+		margin-top: 20px
+		+md
+			font-size: 32px
+		+sm
+			font-size: 24px
+	&__form
+		max-width: 1075px
+		margin: 0 auto
+		margin-top: 60px
+		+sm
+			margin-top: 30px
+	&__address
+		font-size: 21px
+		font-weight: 500
+		margin-top: 40px
+.benefits-item
+	display: flex
+	align-items: center
+	text-align: left
+	+sm
+		margin-top: 10px
+	+xs
+		width: 100%
+		justify-content: center
+	&:not(:last-child)
+		margin-right: 5px
+		+sm
+			margin-right: 0
+	&__icon
+		font-size: 32px
+		color: #fff
+		margin-right: 16px
+		+md
+			font-size: 24px
+			margin-right: 6px
+		+sm
+			margin-right: 15px
+		.icon
+			display: block
+	&__text
+		max-width: 170px
+		font-size: 14px
+		font-weight: 100
+		+md
+			font-size: 12px

@@ -4,47 +4,30 @@ title: Index page
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-	
-	{# variable example #}
-	<h1>{{title}}</h1>
-
-	
-	{# partial example #}
-	{% include "partials/_header.html" %}
-
-	{# mixin example #}
-	{{mixins.icon('facebook')}}
-
-
-	{# checkbox exepmle #}
-	<p>{{ mixins.checkbox() }}</p>
-	<p>
-		{{ mixins.checkbox({
-			checked: true,
-			name: 'exemple-name',
-			text: 'checkbox-checked'
-		}) }}
-	</p>
-	{# radio exepmle #}
-	{{ mixins.checkbox({
-		name: 'exemple-name',
-		text: 'text',
-		radio: true
-	}) }}
-	
-
-	{# breadcrumbs exepmle #}
-	{{ mixins.breadcrumbs({
-		list: ['Главная','Внутренняя','Корзина']
-	}) }}
-
-
-	{# data usage example #}
-		{% import "data/data.html" as tests %}
 		
-		{% for test in tests.list %}
-		<li>{{test.title}}</li>
-		{% endfor %}
-	{# end of example #}
+	{# begin header #}
+	{% include "partials/_header.html" %}
+	{# end header #}
+
+	{# begin main #}
+	{% include "partials/_main.html" %}
+	{# end main #}
+
+	{# begin for-whom #}
+	{% include "partials/_for-whom.html" %}
+	{# end for-whom #}
+
+	{# begin what-learn #}
+	{% include "partials/_what-learn.html" %}
+	{# end what-learn #}
+
+	{# begin about #}
+	{% include "partials/_about.html" %}
+	{# end about #}
+
+	{# begin instructors #}
+	{% include "partials/_instructors.html" %}
+	{# end instructors #}
+
 
 {% endblock %}

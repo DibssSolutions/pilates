@@ -1,0 +1,44 @@
+<div class="instructors">
+	<div class="instructors__inner inner">
+		<h2 class="instructors__title title">Познакомьтесь с вашими преподавателями</h2>
+		<div class="row instructors__list">
+			{% for item in [
+				{
+					name: "Наталья Келтуяла",
+					experience: "17 лет",
+					img: "instructors-1.jpg",
+					text: "Закончила  НГУ физической культуры, спорта и здоровья им. П.Ф.ЛЕСГАФТА. Факультет повышения квалификации и переподготовки кадров.  Специализация - Адаптивная Физическая Культура, СПб Педагогический Колледж Фитнеса, Академию Планеты Фитнес. Опыт работы - 17 лет.
+					Призёр российских и международных соревнований по Спортивным Бальным Танцам.  Презентер международных и российских Конвенций по Фитнесу."
+				},
+				{
+					name: "Ольга Кочешкова",
+					experience: "10 лет",
+					img: "instructors-2.jpg",
+					text: "Профессиональный преподаватель по программе Pilates и постуральная гимнастика.Мастер-тренер Pilates Institute России с 2005 года.Дипломированный тренер (Постуральная гимнастика, Fitness Best Innovation, Италия)Преподаватель курсов Pilates Matwork 1, Pilates Matwork 2+малое оборудование, Большое оборудование.Презентер Международных и Российских Конвенций."
+				},
+				{
+					name: "ИРИНА РОМАНЦОВА",
+					experience: "15 лет",
+					img: "instructors-3.jpg",
+					text: "В прошлом - солистка балета Большого театра России.Дипломированный тренер (Fitness Best Innovation, Италия)Мастер-тренер Pilates Institute России.Профессиональный тренер по работе с танцовщиками, спортсменами.Презентер Международных и Российских Конвенций.В Пилатес Институте проводит курсы по программам: Pilates Matwork 1, Pilates Matwork 2+малое оборудование, Большое оборудование, повышение квалификации инструкторов по пилатесу.Опыт работы - более 15 лет."
+				}
+			] %}
+				<div class="col col-33 col-md-100">
+					<div class="instructors__item">
+						<div class="instructors__name">{{ item.name }}</div>
+						<div class="instructors__experience">(Стаж инструктора {{ item.experience }})</div>
+						<div class="instructors__img">
+							<img src="./img/{{ item.img }}" alt="photo">
+						</div>
+						<div class="instructors__text">
+							{{ item.text }}
+						</div>
+						<div class="instructors__btn">
+							<a href="#" class="btn btn_big">записаться на курс</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+.accordeon
+	&__head
+		position: relative
+		cursor: pointer
+		font-size: 30px
+		font-weight: 900
+		color: $white
+		line-height: 1
+		padding: 30px 65px 28px 43px
+		background-color: $orange
+		+sm
+			font-size: 20px
+			padding: 15px 30px 15px 15px
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			transition: transform .4s
+			background-color: $white
+		&:before
+			width: 16px
+			height: 4px
+			right: 48px
+			top: 44px
+			+sm
+				top: 24px
+				right: 14px
+		&:after
+			width: 4px
+			height: 16px
+			right: 54px
+			top: 38px
+			+sm
+				top: 18px
+				right: 20px
+		&.is-active 
+
+			&:after
+				transform: scaleY(0)
+	&__body
+		display: none
+		padding: 10px 43px 30px
+		// background-color: $orange
+		// color: $white
+		+sm
+			padding: 15px
+	&__list
+		line-height: 1.5
+		font-weight: 500
