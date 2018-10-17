@@ -14,6 +14,19 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
+      <div class="js-success message-sending js-message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner js-message-sending-inner"> Спасибо, что отсавлили завку, в ближайшее время я вам обязательно перезвоню! </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
+      </div>
+      <div class="js-error message-sending js-message-sending">
+        <div class="message-sending__container">
+          <div class="message-sending__inner js-message-sending-inner js-error-block">
+          </div>
+          <button class="message-sending__x js-close">&#10006;</button>
+        </div>
+      </div>
       <header class="header js-header">
         <div class="header__inner inner">
           <div class="header__logo">
@@ -32,10 +45,10 @@
                   <a href="#about" class="nav__link js-menu-link">О курсе</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#price" class="nav__link js-menu-link">Стоимость</a>
+                  <a href="#certificate" class="nav__link js-menu-link">Сертификат</a>
                 </li>
                 <li class="nav__item">
-                  <a href="#program" class="nav__link js-menu-link">Программа</a>
+                  <a href="#price" class="nav__link js-menu-link">Стоимость</a>
                 </li>
                 <li class="nav__item">
                   <a href="#contacts" class="nav__link js-menu-link">Контакты</a>
@@ -70,7 +83,7 @@
               <h2 class="main__date">03-05 октября 2018 г.</h2>
               <h2 class="main__title">Начальный Курс - MatWork 1</h2>
               <div class="main__form">
-                <form action="form.php" class="form js-form" method="POST">
+                <form action="" class="form js-form">
                   <div class="row">
                     <div class="col col-25 col-md-33 col-sm-100">
                       <div class="form__input-group"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
@@ -194,11 +207,11 @@
             </div>
           </div>
           <div class="what-learn__btn">
-            <a href="#" class="btn btn_dark btn_big">записаться на курс</a>
+            <a href="#" class="btn btn_dark btn_big" data-modal-control="modal-form">записаться на курс</a>
           </div>
         </div>
       </div>
-      <div class="about">
+      <div class="about js-navigation-section" id="about">
         <div class="about__inner inner">
           <h2 class="about__title title">О курсе “PILATES MATWORK 1”</h2>
           <p> Инструктор, тренер, преподаватель, специалист, наставник – это человек, который помогает и отвечает за правильное выполнение физических упражнений с целью оздоровления и приведения своего тела в совершенный вид. Идеальный претендент на это звание, как правило, разбирается в анатомии, знает принципы выполнения результативных упражнений, имеет практические и теоретические знания в области ЛФК, умеет работать с людьми и, даже, разбирается в психологии. В современной фитнес индустрии такие профессионалы встречаются редко, но они крайне необходимы! <a href="#" class="about__link">Прочесть подробнее о курсе >>></a>
@@ -260,7 +273,7 @@
             </li>
           </ul>
           <div class="about__btn">
-            <a href="#" class="btn btn_big">записаться на курс</a>
+            <a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
           </div>
         </div>
       </div>
@@ -277,7 +290,7 @@
                 </div>
                 <div class="instructors__text"> Закончила НГУ физической культуры, спорта и здоровья им. П.Ф.ЛЕСГАФТА. Факультет повышения квалификации и переподготовки кадров. Специализация - Адаптивная Физическая Культура, СПб Педагогический Колледж Фитнеса, Академию Планеты Фитнес. Опыт работы - 17 лет. Призёр российских и международных соревнований по Спортивным Бальным Танцам. Презентер международных и российских Конвенций по Фитнесу. </div>
                 <div class="instructors__btn">
-                  <a href="#" class="btn btn_big">записаться на курс</a>
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
                 </div>
               </div>
             </div>
@@ -290,7 +303,7 @@
                 </div>
                 <div class="instructors__text"> Профессиональный преподаватель по программе Pilates и постуральная гимнастика.Мастер-тренер Pilates Institute России с 2005 года.Дипломированный тренер (Постуральная гимнастика, Fitness Best Innovation, Италия)Преподаватель курсов Pilates Matwork 1, Pilates Matwork 2+малое оборудование, Большое оборудование.Презентер Международных и Российских Конвенций. </div>
                 <div class="instructors__btn">
-                  <a href="#" class="btn btn_big">записаться на курс</a>
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
                 </div>
               </div>
             </div>
@@ -303,15 +316,202 @@
                 </div>
                 <div class="instructors__text"> В прошлом - солистка балета Большого театра России.Дипломированный тренер (Fitness Best Innovation, Италия)Мастер-тренер Pilates Institute России.Профессиональный тренер по работе с танцовщиками, спортсменами.Презентер Международных и Российских Конвенций.В Пилатес Институте проводит курсы по программам: Pilates Matwork 1, Pilates Matwork 2+малое оборудование, Большое оборудование, повышение квалификации инструкторов по пилатесу.Опыт работы - более 15 лет. </div>
                 <div class="instructors__btn">
-                  <a href="#" class="btn btn_big">записаться на курс</a>
+                  <a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="certificate js-navigation-section" id="certificate">
+        <div class="certificate__inner inner">
+          <h2 class="certificate__title title title_white">После прохождения курса вы получите Сертификат</h2>
+          <div class="certificate__content">
+            <ul class="certificate__list">
+              <li class="certificate__item">Сертификат, который дает право на работу инструктором по пилатесу!</li>
+              <li class="certificate__item">Сертификат, который будет действителен не только на всей территории Российской Федерации. </li>
+              <li class="certificate__item">Сертификат, который вы можете разместить в резюме, что позволит более выгодно выглядеть на фоне других соискателей должности!</li>
+              <li class="certificate__item">Возможность пройти остальные наши курсы (MatWork 2 + Малое оборудование), Большое оборудование, и другие) для профессионального и личностного роста!</li>
+            </ul>
+            <!-- <div class="certificate__wrap"> -->
+            <div class="certificate__img">
+              <img src="./img/certificate.jpg" alt="certificate">
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="certificate__bottom">
+            <h3 class="certificate__bottom-title">Хотите получить сертификат?</h3>
+            <div class="certificate__bottom-content">
+              <div class="certificate__bottom-text">
+                <p> После курса вы будете специалистом в области пилатес практики и инструктажа, сможете эффективно пользоваться всеми навыками и проводить занятия для своих учеников. </p>
+              </div>
+              <div class="certificate__bottom-btn">
+                <a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graduates" id="graduates">
+        <div class="graduates__inner inner">
+          <h2 class="graduates__title title">Выпускники о курсе</h2>
+          <div class="graduates__list slider js-slider">
+            <div class="graduates__slide slider__slide">
+              <div class="graduates__item graduates-item">
+                <div class="graduates-item__top">
+                  <div class="graduates-item__img" style="background-image: url(./img/graduates.jpg)"></div>
+                  <div class="graduates-item__info">
+                    <div class="graduates-item__title title-small">Грабчак Олег</div>
+                    <div class="graduates-item__subtitle">Студент Курса</div>
+                  </div>
+                </div>
+                <div class="graduates-item__text">
+                  <p> Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом! </p>
+                </div>
+              </div>
+            </div>
+            <div class="graduates__slide slider__slide">
+              <div class="graduates__item graduates-item">
+                <div class="graduates-item__top">
+                  <div class="graduates-item__img" style="background-image: url(./img/graduates.jpg)"></div>
+                  <div class="graduates-item__info">
+                    <div class="graduates-item__title title-small">Грабчак Олег</div>
+                    <div class="graduates-item__subtitle">Студент Курса</div>
+                  </div>
+                </div>
+                <div class="graduates-item__text">
+                  <p> Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом! </p>
+                </div>
+              </div>
+            </div>
+            <div class="graduates__slide slider__slide">
+              <div class="graduates__item graduates-item">
+                <div class="graduates-item__top">
+                  <div class="graduates-item__img" style="background-image: url(./img/graduates.jpg)"></div>
+                  <div class="graduates-item__info">
+                    <div class="graduates-item__title title-small">Грабчак Олег</div>
+                    <div class="graduates-item__subtitle">Студент Курса</div>
+                  </div>
+                </div>
+                <div class="graduates-item__text">
+                  <p> Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом! </p>
+                </div>
+              </div>
+            </div>
+            <div class="graduates__slide slider__slide">
+              <div class="graduates__item graduates-item">
+                <div class="graduates-item__top">
+                  <div class="graduates-item__img" style="background-image: url(./img/graduates.jpg)"></div>
+                  <div class="graduates-item__info">
+                    <div class="graduates-item__title title-small">Грабчак Олег</div>
+                    <div class="graduates-item__subtitle">Студент Курса</div>
+                  </div>
+                </div>
+                <div class="graduates-item__text">
+                  <p> Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом! </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price js-navigation-section" id="price">
+        <div class="price__inner inner">
+          <h2 class="price__title title">Стоимость курса</h2>
+          <div class="price__content">
+            <div class="price__card price-card">
+              <div class="price-card__top"> При 100% предоплате за 30 дней до начала курса - скидка 10% </div>
+              <div class="price-card__center">
+                <div class="price-card__old">
+                  <div class="price-card__old-title">Полная стоимость курса:</div>
+                  <div class="price-card__old-price">17 900 Р</div>
+                </div>
+                <div class="price-card__new">
+                  <div class="price-card__new-title">Рассрочка без первого взноса</div>
+                  <div class="price-card__new-price">16 110 P</div>
+                </div>
+              </div>
+              <div class="price-card__bottom"><span>* </span>При оплате курса полностью действует скидка 10%</div>
+            </div>
+            <div class="price__form">
+              <form action="form.php" class="form js-form" method="POST">
+                <h3 class="form__title">Запишитесь на курс</h3>
+                <div class="form__start">Старт курса: <strong>15 октября (осталось 24 дня)</strong></div>
+                <div class="form__start">Осталось: <strong>15 мест</strong></div>
+                <div class="form__start"><strong>Адрес: г. Москва - Уточняется</strong></div>
+                <div class="form__group">
+                  <div class="form__input-group form__input-group_column"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
+                  <div class="form__input-group form__input-group_column"><input type="text" class="form__input" name="email" placeholder="Email"></div>
+                  <div class="form__input-group form__input-group_column"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон" minlength="16"></div>
+                  <div class="form__submit">
+                    <button class="btn btn_wide js-btn-submit" type="submit">
+                      <span class="btn__text">записаться на курс</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts js-navigation-section" id="contacts">
+        <div class="contacts__inner inner">
+          <h2 class="contacts__title title">Карта</h2>
+        </div>
+        <div class="contacts__map">
+          <div id="map"></div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner inner">
+          <div class="footer__content">
+            <div class="footer__logo">
+              <img src="./img/logo.png" alt="logo">
+            </div>
+            <div class="footer__text">
+              <p> Первый пилатес институт в России - основан в 2005 году </p>
+            </div>
+            <div class="footer__links">
+              <a href="tel:+79150844763" class="footer__tel"> +7 (915) 084-47-63 </a>
+              <a href="http://instagram.com" class="footer__inst">
+                <svg class="icon icon-instagram">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" data-modal="modal-form">
+        <div class="modal__container modal-form__container" data-modal-container>
+          <div class="modal__inner modal-form__inner">
+            <button class="modal__close modal-form__close" data-modal-close>
+              <svg class="icon icon-close">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <form action="form.php" class="form js-form" method="POST">
+              <h3 class="form__title">Запишитесь на курс</h3>
+              <div class="form__start">Старт курса: <strong>15 октября (осталось 24 дня)</strong></div>
+              <div class="form__start">Осталось: <strong>15 мест</strong></div>
+              <div class="form__start"><strong>Адрес: г. Москва - Уточняется</strong></div>
+              <div class="form__group">
+                <div class="form__input-group form__input-group_column"><input type="text" class="form__input" name="name" placeholder="Имя"></div>
+                <div class="form__input-group form__input-group_column"><input type="text" class="form__input" name="email" placeholder="Email"></div>
+                <div class="form__input-group form__input-group_column"><input type="text" class="form__input js-phone-mask" name="phone" placeholder="Телефон" minlength="16"></div>
+                <div class="form__submit">
+                  <button class="btn btn_wide js-btn-submit" type="submit">
+                    <span class="btn__text">записаться на курс</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
+    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
     <!-- BEGIN scripts -->
     <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->

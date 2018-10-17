@@ -10,3 +10,4 @@ import './_slider';
 import './_popup';
 import './_scroll-up';
 import './_accordeon';
+import './_map';

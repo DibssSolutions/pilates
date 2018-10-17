@@ -1,0 +1,92 @@
+.price
+	padding: 75px 0 0
+	+md
+		padding: 30px 0
+	&__title
+		margin-bottom: 50px
+		+sm
+			margin-bottom: 20px
+	&__content
+		display: flex
+		box-shadow: 0 0 15px rgba(#b9b9b9,.48)
+		+sm
+			flex-direction: column
+	&__card
+		flex-basis: 50%
+	&__form
+		flex-basis: 50%
+		padding: 35px 66px 55px 77px
+		+md
+			padding: 15px 25px
+		+sm
+			padding: 20px 10px
+
+.price-card
+	padding: 40px 40px 50px
+	color: $white
+	text-align: center
+	background-color: $blue
+	+sm
+		padding: 20px 10px
+	&__top
+		position: relative
+		font-weight: 900
+		font-size: 18px
+		line-height: 2.33
+		padding-bottom: 60px
+		max-width: 340px
+		margin: 0 auto
+		+sm
+			padding-bottom: 35px
+		+xs
+			font-size: 16px
+			line-height: 1.4
+			padding-bottom: 20px
+		&:after
+			content: ""
+			position: absolute
+			width: 234px
+			height: 3px
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			background-color: #cccccc
+  			box-shadow: 0 0 22px rgba(#b9b9b9,.48)
+	&__center
+		margin-top: 25px
+		font-weight: 300
+		+xs
+			margin-top: 15px
+	&__old
+	&__old-title
+	&__old-price
+		margin-top: 10px
+		font-size: 38px
+		font-weight: 500
+		text-decoration: line-through
+	&__new
+		margin-top: 32px
+		+xs
+			margin-top: 15px
+	&__new-title
+		font-size: 18px
+	&__new-price
+		font-size: 55px
+		font-weight: 500
+	&__bottom
+		margin-top: 80px
+		font-weight: 500
+		color: #cccccc
+		text-align: left
+		font-size: 14px
+		+sm
+			margin-top: 30px
+			text-align: center
+		+xs
+			margin-top: 20px
+		span
+			color: $orange
+
+
+	
+

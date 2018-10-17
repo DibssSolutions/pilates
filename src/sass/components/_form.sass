@@ -1,4 +1,15 @@
 .form
+	&__title
+		font-size: 18px
+		text-align: center
+		margin-bottom: 15px
+		font-weight: 900
+	&__start
+		font-size: 14px
+		font-weight: 300
+		text-align: center
+		+xs
+			font-size: 13px
 	label.error
 		top: 100%
 		left: 0
@@ -6,11 +17,18 @@
 		position: absolute
 		padding-top: 2px
 		font-size: 12px
-		color: #fff
+		color: red
 		width: 100%
 		text-align: center
+	&__group
+		margin-top: 55px
+		+sm
+			margin-top: 30px
 	&__input-group
 		position: relative
+		&_column
+			&:not(:first-child)
+				margin-top: 24px
 	&__input
 		width: 100%
 		font-family: $museo
@@ -38,3 +56,5 @@
 		&:last-child
 			+md
 				margin-top: 20px
+	&__submit
+		margin-top: 32px

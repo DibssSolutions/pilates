@@ -1,0 +1,35 @@
+<div class="certificate js-navigation-section" id="certificate">
+	<div class="certificate__inner inner">
+		<h2 class="certificate__title title title_white">После прохождения курса вы получите Сертификат</h2>
+		<div class="certificate__content">
+			<ul class="certificate__list">
+				{% for item in [
+					"Сертификат, который дает право на работу инструктором по пилатесу!",
+					"Сертификат, который будет действителен не только на всей территории Российской Федерации. ",
+					"Сертификат, который вы можете разместить в резюме, что позволит более выгодно выглядеть на фоне других соискателей должности!",
+					"Возможность пройти остальные наши курсы (MatWork 2 + Малое оборудование), Большое оборудование,  и другие) для профессионального и личностного роста!"
+				] %}
+					<li class="certificate__item">{{ item }}</li>
+				{% endfor %}
+			</ul>
+			<!-- <div class="certificate__wrap"> -->
+				<div class="certificate__img">
+					<img src="./img/certificate.jpg" alt="certificate">
+				</div>
+			<!-- </div> -->
+		</div>
+		<div class="certificate__bottom">
+			<h3 class="certificate__bottom-title">Хотите получить сертификат?</h3>
+			<div class="certificate__bottom-content">
+				<div class="certificate__bottom-text">
+					<p>
+						После курса вы будете специалистом в области пилатес практики и инструктажа, сможете эффективно пользоваться всеми навыками и проводить занятия для своих учеников.
+					</p>
+				</div>
+				<div class="certificate__bottom-btn">
+					<a href="#" class="btn btn_big" data-modal-control="modal-form">записаться на курс</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

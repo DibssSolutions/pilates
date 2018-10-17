@@ -1,0 +1,50 @@
+<div class="graduates" id="graduates">
+	<div class="graduates__inner inner">
+		<h2 class="graduates__title title">Выпускники о курсе</h2>
+		<div class="graduates__list slider js-slider">
+			{% for item in [
+					{
+						title: "Грабчак Олег",
+						subtitle: "Студент Курса",
+						img: "graduates.jpg",
+						text: "Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом!"
+					},
+					{
+						title: "Грабчак Олег",
+						subtitle: "Студент Курса",
+						img: "graduates.jpg",
+						text: "Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом!"
+					},
+					{
+						title: "Грабчак Олег",
+						subtitle: "Студент Курса",
+						img: "graduates.jpg",
+						text: "Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом!"
+					},
+					{
+						title: "Грабчак Олег",
+						subtitle: "Студент Курса",
+						img: "graduates.jpg",
+						text: "Я учусь на инструктора, чтобы бросить продажи и занятся любимым делом!"
+					}
+				] %}
+				<div class="graduates__slide slider__slide">
+					<div class="graduates__item graduates-item">
+						<div class="graduates-item__top">
+							<div class="graduates-item__img" style="background-image: url(./img/{{ item.img }})"></div>
+							<div class="graduates-item__info">
+								<div class="graduates-item__title title-small">{{ item.title }}</div>
+								<div class="graduates-item__subtitle">{{ item.subtitle }}</div>
+							</div>
+						</div>
+						<div class="graduates-item__text">
+							<p>
+								{{ item.text }}
+							</p>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
