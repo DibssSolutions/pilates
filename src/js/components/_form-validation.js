@@ -36,7 +36,9 @@ formSubmit.each((i, submit) => {
       e.preventDefault();
     }
     else {
-      modal.removeClass('is-open');
+      setTimeout(() => {
+        modal.removeClass('is-open');
+      }, 3000);
     }
   });
 });
