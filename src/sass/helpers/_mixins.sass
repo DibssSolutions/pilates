@@ -145,6 +145,15 @@
     display: table
     clear: both
 
+=invis
+	opacity: 0
+	visibility: hidden
+	transition: opacity $tr, visibility $tr
+
+=vis
+	opacity: 1
+	visibility: visible
+
 
 =placeholder-color($color)
   &::placeholder
